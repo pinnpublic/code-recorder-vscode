@@ -1,0 +1,44 @@
+{
+  "name": "code-recorder-vscode",
+  "displayName": "Code Recorder — 수업 코드 녹화",
+  "description": "코드 작성 과정을 녹화하고 파일별·단계별로 다시 볼 수 있는 도구입니다.",
+  "version": "0.1.9",
+  "publisher": "pinnpublic",
+  "engines": { "vscode": "^1.100.0" },
+  "categories": ["Education"],
+  "keywords": ["recording", "teaching", "replay", "education", "code-recorder"],
+  "license": "UNLICENSED",
+  "icon": "media/icon.png",
+  "galleryBanner": { "color": "#182b40", "theme": "dark" },
+  "main": "./src/extension.js",
+  "extensionKind": ["workspace"],
+  "activationEvents": ["onStartupFinished"],
+  "capabilities": {
+    "untrustedWorkspaces": { "supported": false, "description": "녹화할 프로젝트를 신뢰한 뒤 시작하세요." },
+    "virtualWorkspaces": { "supported": false }
+  },
+  "contributes": {
+    "commands": [
+      { "command": "codeRecorder.start", "title": "녹화 시작", "category": "Code Recorder", "icon": "$(record)", "enablement": "!codeRecorder.busy && isWorkspaceTrusted" },
+      { "command": "codeRecorder.stop", "title": "녹화 종료 / 내보내기", "category": "Code Recorder", "icon": "$(primitive-square)", "enablement": "codeRecorder.recording" },
+      { "command": "codeRecorder.recover", "title": "보관된 녹화 복구 / 다시 내보내기", "category": "Code Recorder" },
+      { "command": "codeRecorder.settings", "title": "녹화 설정", "category": "Code Recorder" },
+      { "command": "codeRecorder.exportPlayer", "title": "뷰어 저장", "category": "Code Recorder" }
+    ],
+    "menus": { "explorer/context": [{ "command": "codeRecorder.start", "when": "explorerResourceIsFolder && resourceScheme == file", "group": "navigation@90" }] },
+    "configuration": {
+      "title": "Code Recorder",
+      "properties": {
+        "codeRecorder.excludeNames": { "type": "array", "items": { "type": "string" }, "default": [".git", ".settings", ".metadata", ".env", "target", "bin", "build", "node_modules", "dist", "coverage"], "description": "녹화에서 제외할 폴더·파일 이름입니다. 숨김 경로는 항상 제외합니다." },
+        "codeRecorder.extensions": { "type": "array", "items": { "type": "string" }, "default": ["java", "jsp", "jspx", "xml", "html", "htm", "css", "scss", "js", "jsx", "ts", "tsx", "json", "properties", "yml", "yaml", "sql", "txt", "md", "gradle", "py", "go", "rs", "c", "cpp", "h", "cs", "vue", "svelte", "php", "kt", "kts"], "description": "기록할 텍스트 파일 확장자입니다. 점을 제외하고 입력하세요." }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "test:integration": "node scripts/test-integration.cjs",
+    "package": "node scripts/package.cjs",
+    "check:publish": "node scripts/check-publish.cjs"
+  },
+  "devDependencies": { "@vscode/vsce": "^3.6.2", "@vscode/test-electron": "^2.5.2" }
+}

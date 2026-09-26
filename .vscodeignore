@@ -1,0 +1,13 @@
+node_modules/**
+tests/**
+scripts/**
+build/**
+dist/**
+.vscode/**
+.git/**
+package-lock.json
+VALIDATION.md
+PUBLISHING.md
+**/*.vsix
+**/*.log
+.gitignore
