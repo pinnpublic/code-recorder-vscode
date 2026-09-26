@@ -7,7 +7,7 @@
   "engines": { "vscode": "^1.100.0" },
   "categories": ["Education"],
   "keywords": ["recording", "teaching", "replay", "education", "code-recorder"],
-  "license": "UNLICENSED",
+  "license": "MIT",
   "icon": "media/icon.png",
   "galleryBanner": { "color": "#182b40", "theme": "dark" },
   "main": "./src/extension.js",
