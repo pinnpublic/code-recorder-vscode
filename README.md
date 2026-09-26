@@ -7,7 +7,7 @@
 ### Marketplace
 
 1. VS Code에서 **확장** 화면을 엽니다. (`Ctrl+Shift+X`)
-2. 검색창에 `@id:pinnpublic.code-recorder-vscode`를 입력합니다.
+2. 검색창에 `Code Recorder — 수업 코드 녹화`를 입력합니다.
 3. Code Recorder를 선택하고 **설치**를 누릅니다.
 
 ### VSIX 파일
