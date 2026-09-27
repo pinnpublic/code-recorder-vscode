@@ -6,6 +6,8 @@
 
 ### Marketplace
 
+[Visual Studio Marketplace에서 열기](https://marketplace.visualstudio.com/items?itemName=pinnpublic.code-recorder-vscode)
+
 1. VS Code에서 **확장** 화면을 엽니다. (`Ctrl+Shift+X`)
 2. 검색창에 `Code Recorder — 수업 코드 녹화`를 입력합니다.
 3. Code Recorder를 선택하고 **설치**를 누릅니다.
@@ -32,6 +34,34 @@
 **Code Recorder: 녹화 설정**에서 제외할 폴더·파일 이름과 기록할 확장자를 지정합니다. 설정 변경은 다음 녹화부터 적용합니다.
 
 숨김 경로, `node_modules`, 빌드 산출물은 기본적으로 제외됩니다. 파일당 2MB, 초기 코드 64MB·5,000개 제한이 있습니다.
+
+## 플레이어
+
+[VS Code 플레이어 열기](https://paper.pe.kr/code-recorder/vscode/)
+
+### 녹화 파일 열기
+
+**녹화 파일 열기**에서 저장한 `.coderec.json` 파일을 선택합니다.
+
+![녹화 파일을 여는 시작 화면](docs/screenshots/player-welcome.png)
+
+### 자동 보기
+
+**재생** 또는 **Space**로 재생·일시정지합니다. 속도를 선택하거나 타임라인으로 이동할 수 있습니다.
+
+![자동 보기의 코드 화면과 재생 컨트롤](docs/screenshots/player-auto.png)
+
+### 단계별 보기
+
+**이전 단계 / 다음 단계** 또는 **← / →**로 이동하고 변경 전·후 코드를 확인합니다.
+
+![단계별 코드와 변경 전후 비교](docs/screenshots/player-steps.png)
+
+### 재생 설정
+
+파일 전환 대기 시간, 전환 시 멈춤, 코드 글자 크기를 조절합니다. 단축키도 여기서 확인할 수 있습니다.
+
+![파일 전환 설정과 키보드 단축키](docs/screenshots/player-settings.png)
 
 ## 기록 복구와 다시 내보내기
 
