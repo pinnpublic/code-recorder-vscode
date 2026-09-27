@@ -35,10 +35,6 @@
 
 숨김 경로, `node_modules`, 빌드 산출물은 기본적으로 제외됩니다. 파일당 2MB, 초기 코드 64MB·5,000개 제한이 있습니다.
 
-## 플레이어
-
-[VS Code 플레이어 열기](https://paper.pe.kr/code-recorder/vscode/)
-
 ### 녹화 파일 열기
 
 **녹화 파일 열기**에서 저장한 `.coderec.json` 파일을 선택합니다.
